@@ -1,0 +1,18 @@
+package com.ywn.task;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class BothMediaImpl implements Strategy {
+
+    @Override
+    public String play(String file) {
+        if (file.contains(".mp3") || file.contains(".mp4")) {
+            return "Playing "+ file + " file. (libraryC)";
+        }
+
+        return "Not supported type";
+
+    }
+
+}
